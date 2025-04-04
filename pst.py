@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import os
@@ -10,13 +10,13 @@ import email
 import hashlib
 import shutil
 
-from viper.common.abstracts import Module
-from viper.core.session import __sessions__
-from viper.core.project import __project__
-from viper.common.objects import File
-from viper.core.storage import store_sample
-from viper.core.database import Database
-from viper.common.utils import string_clean
+from menagerie.common.abstracts import Module
+from menagerie.core.session import __sessions__
+from menagerie.core.project import __project__
+from menagerie.common.objects import File
+from menagerie.core.storage import store_sample
+from menagerie.core.database import Database
+from menagerie.common.utils import string_clean
 
 
 class PST(Module):

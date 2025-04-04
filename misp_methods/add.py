@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 try:
@@ -8,8 +8,8 @@ try:
 except ImportError:
     HAVE_PYMISP = False
 
-from viper.core.session import __sessions__
-from viper.common.objects import MispEvent
+from menagerie.core.session import __sessions__
+from menagerie.common.objects import MispEvent
 
 
 def _check_add(self, new_event):

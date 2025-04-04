@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # and developed by Koodous Team.
 # See the file 'LICENSE' for copying permission.
 
@@ -15,11 +15,11 @@ import logging
 import hashlib
 import tempfile
 
-from viper.common.abstracts import Module
-from viper.core.session import __sessions__
-from viper.core.config import __config__
+from menagerie.common.abstracts import Module
+from menagerie.core.session import __sessions__
+from menagerie.core.config import __config__
 
-log = logging.getLogger('viper')
+log = logging.getLogger('menagerie')
 
 cfg = __config__
 cfg.parse_http_client(cfg.koodous)

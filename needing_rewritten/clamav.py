@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 try:
@@ -10,10 +10,10 @@ except ImportError:
 
 import os
 
-from viper.common.abstracts import Module
-from viper.core.database import Database, Malware
-from viper.core.session import __sessions__
-from viper.core.storage import get_sample_path
+from menagerie.common.abstracts import Module
+from menagerie.core.database import Database, Malware
+from menagerie.core.session import __sessions__
+from menagerie.core.storage import get_sample_path
 
 
 class ClamAV(Module):

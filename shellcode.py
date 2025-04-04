@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import re
 
-from viper.common.out import cyan
-from viper.common.utils import hexdump
-from viper.common.abstracts import Module
-from viper.core.session import __sessions__
+from menagerie.common.out import cyan
+from menagerie.common.utils import hexdump
+from menagerie.common.abstracts import Module
+from menagerie.core.session import __sessions__
 
 
 class Shellcode(Module):

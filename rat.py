@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import os
 import importlib
 
-import viper
-from viper.common.out import bold
-from viper.common.abstracts import Module
-from viper.core.session import __sessions__
+import menagerie
+from menagerie.common.out import bold
+from menagerie.common.abstracts import Module
+from menagerie.core.session import __sessions__
 
 try:
     from scandir import walk
@@ -37,7 +37,7 @@ class RAT(Module):
     def list(self):
         self.log('info', "List of available RAT modules:")
 
-        rat_modules_path = os.path.join(os.path.join(os.path.dirname(viper.__file__), 'modules/rats/'))
+        rat_modules_path = os.path.join(os.path.join(os.path.dirname(menagerie.__file__), 'modules/rats/'))
         for folder, folders, files in walk(rat_modules_path):
             for file_name in files:
                 if not file_name.endswith('.py') or file_name.startswith('__init__'):
@@ -51,7 +51,7 @@ class RAT(Module):
             return
 
         try:
-            module = importlib.import_module('viper.modules.rats.{0}'.format(family))
+            module = importlib.import_module('menagerie.modules.rats.{0}'.format(family))
         except ImportError:
             self.log('error', "There is no module for family {0}".format(bold(family)))
             return
@@ -82,7 +82,7 @@ class RAT(Module):
             self.log('error', "No open session. This command expects a file to be open.")
             return
 
-        rules = yara.compile(os.path.join(os.path.dirname(viper.__file__), "data", "yara", "rats.yara"))
+        rules = yara.compile(os.path.join(os.path.dirname(menagerie.__file__), "data", "yara", "rats.yara"))
         for match in rules.match(__sessions__.current.file.path):
             if 'family' in match.meta:
                 self.log('info', "Automatically detected supported RAT {0}".format(match.rule))

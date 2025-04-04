@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import os
 import json
 import tempfile
 
-from viper.common.abstracts import Module
-from viper.core.session import __sessions__
+from menagerie.common.abstracts import Module
+from menagerie.core.session import __sessions__
 
 from .pdftools.pdfid import PDFiD, PDFiD2JSON
 from .pdftools import (cPDFParser, PDF_ELEMENT_COMMENT, PDF_ELEMENT_INDIRECT_OBJECT,

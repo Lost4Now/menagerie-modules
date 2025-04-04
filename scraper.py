@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import json
@@ -9,9 +9,9 @@ from datetime import datetime
 from glob import glob
 from shutil import copy2
 
-from viper.common.abstracts import Module
-from viper.core.config import __config__
-from viper.core.project import __project__
+from menagerie.common.abstracts import Module
+from menagerie.core.config import __config__
+from menagerie.core.project import __project__
 import logging
 
 logger = logging.getLogger(__name__)
@@ -47,7 +47,7 @@ class Scraper(Module):
         try:
             self.user_agents = cfg.useragents.ua.split('\n')
         except Exception:
-            # Use a generic user agent in case the viper user didn't update their config file
+            # Use a generic user agent in case the menagerie user didn't update their config file
             self.user_agents = ['Mozilla/5.0 (Windows NT 6.3; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0']
         self.scraper_store = os.path.join(__project__.get_path(), 'scraper')
         if not os.path.exists(self.scraper_store):
@@ -110,7 +110,7 @@ class Scraper(Module):
 
     def tree(self):
         if not HAVE_ETE:
-            self.log('error', 'Missing dependency: git+https://github.com/viper-framework/har2tree.git')
+            self.log('error', 'Missing dependency: git+https://github.com/menagerie-framework/har2tree.git')
             return
         har_files = self.all_reports[self.reportid]['har']
         ct = CrawledTree(har_files)

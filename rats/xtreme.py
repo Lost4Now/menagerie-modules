@@ -6,7 +6,7 @@ from struct import unpack
 
 import pefile
 
-from viper.common.out import print_warning, print_error
+from menagerie.common.out import print_warning, print_error
 
 
 def get_unicode_string(buf, pos):

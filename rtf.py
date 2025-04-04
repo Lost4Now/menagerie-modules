@@ -8,8 +8,8 @@ http://www.decalage.info/python/oletools
 import os
 import tempfile
 
-from viper.common.abstracts import Module
-from viper.core.session import __sessions__
+from menagerie.common.abstracts import Module
+from menagerie.core.session import __sessions__
 
 try:
     from oletools.rtfobj import RtfObjParser

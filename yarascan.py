@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import os
@@ -12,12 +12,12 @@ try:
 except ImportError:
     from os import walk
 
-import viper
-from viper.common.abstracts import Module
-from viper.core.database import Database
-from viper.core.session import __sessions__
-from viper.core.storage import get_sample_path
-from viper.core.config import __config__
+import menagerie
+from menagerie.common.abstracts import Module
+from menagerie.core.database import Database
+from menagerie.core.session import __sessions__
+from menagerie.core.storage import get_sample_path
+from menagerie.core.config import __config__
 
 try:
     import yara
@@ -57,9 +57,9 @@ class YaraScan(Module):
         parser_rules.add_argument('-e', '--edit', help='Open an editor to edit the specified rule')
         parser_rules.add_argument('-u', '--update', action='store_true', help='Download latest rules from selected repositories')
 
-        self.local_rules = os.path.join(expanduser('~'), '.viper', 'yara')
+        self.local_rules = os.path.join(expanduser('~'), '.menagerie', 'yara')
         self.rules_paths = [
-            os.path.join(os.path.dirname(viper.__file__), "data", "yara"),
+            os.path.join(os.path.dirname(menagerie.__file__), "data", "yara"),
             self.local_rules
         ]
 

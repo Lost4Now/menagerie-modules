@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
-from viper.common.abstracts import Module
-from viper.core.project import __project__
+from menagerie.common.abstracts import Module
+from menagerie.core.project import __project__
 
 try:
     import snoopdroid

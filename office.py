@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file "LICENSE" for copying permission.
 
 """
@@ -12,9 +12,9 @@ import struct
 import zipfile
 import xml.etree.ElementTree as ET
 
-from viper.common.utils import string_clean, string_clean_hex
-from viper.common.abstracts import Module
-from viper.core.session import __sessions__
+from menagerie.common.utils import string_clean, string_clean_hex
+from menagerie.common.abstracts import Module
+from menagerie.core.session import __sessions__
 
 from io import BytesIO, open
 

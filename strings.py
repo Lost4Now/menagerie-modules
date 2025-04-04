@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import os
@@ -7,11 +7,11 @@ import re
 import string
 from socket import inet_pton, AF_INET6, error as socket_error
 
-from viper.common.abstracts import Module
-from viper.common.objects import File, IOBytes
-from viper.core.session import __sessions__
-from viper.core.database import Database
-from viper.core.storage import get_sample_path
+from menagerie.common.abstracts import Module
+from menagerie.common.objects import File, IOBytes
+from menagerie.core.session import __sessions__
+from menagerie.core.database import Database
+from menagerie.core.storage import get_sample_path
 
 DOMAIN_REGEX = re.compile(r'([a-z0-9][a-z0-9\-]{0,61}[a-z0-9]\.)+[a-z0-9][a-z0-9\-]*[a-z0-9]', re.IGNORECASE)
 IPV4_REGEX = re.compile(r'[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]\.[1-2]?[0-9]?[0-9]')

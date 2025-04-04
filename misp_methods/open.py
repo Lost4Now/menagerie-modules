@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import os
 import glob
 import shutil
 
-from viper.core.session import __sessions__
-from viper.common.objects import MispEvent
+from menagerie.core.session import __sessions__
+from menagerie.common.objects import MispEvent
 
 
 def _load_tmp_samples(self):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import os
@@ -17,14 +17,14 @@ try:
 except ImportError:
     HAVE_VT = False
 
-from viper.common.out import bold
-from viper.common.abstracts import Module
-from viper.common.objects import MispEvent
-from viper.core.session import __sessions__
-from viper.core.project import __project__
-from viper.core.config import __config__
+from menagerie.common.out import bold
+from menagerie.common.abstracts import Module
+from menagerie.common.objects import MispEvent
+from menagerie.core.session import __sessions__
+from menagerie.core.project import __project__
+from menagerie.core.config import __config__
 
-log = logging.getLogger('viper')
+log = logging.getLogger('menagerie')
 
 cfg = __config__
 cfg.parse_http_client(cfg.virustotal)

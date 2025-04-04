@@ -8,7 +8,7 @@ from io import StringIO
 from Crypto.Cipher import ARC4
 import xml.etree.ElementTree as ET
 
-from viper.common.out import print_info
+from menagerie.common.out import print_info
 
 
 def extract_embedded(zip_data):

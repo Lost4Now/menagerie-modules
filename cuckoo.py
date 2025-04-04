@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 try:
@@ -16,14 +16,14 @@ import tarfile
 import contextlib
 from io import BytesIO
 
-from viper.common.abstracts import Module
-from viper.core.session import __sessions__
-from viper.core.database import Database
-from viper.common.objects import File
-from viper.core.storage import store_sample
-from viper.core.config import __config__
+from menagerie.common.abstracts import Module
+from menagerie.core.session import __sessions__
+from menagerie.core.database import Database
+from menagerie.common.objects import File
+from menagerie.core.storage import store_sample
+from menagerie.core.config import __config__
 
-log = logging.getLogger('viper')
+log = logging.getLogger('menagerie')
 
 cfg = __config__
 cfg.parse_http_client(cfg.cuckoo)

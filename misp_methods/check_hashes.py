@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import time
@@ -19,9 +19,9 @@ except ImportError:
     HAVE_REQUESTS = False
 
 
-from viper.core.session import __sessions__
-from viper.common.objects import MispEvent
-from viper.core.config import __config__
+from menagerie.core.session import __sessions__
+from menagerie.common.objects import MispEvent
+from menagerie.core.config import __config__
 
 cfg = __config__
 

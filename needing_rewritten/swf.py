@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import os
@@ -14,11 +14,11 @@ try:
 except ImportError:
     HAVE_PYLZMA = False
 
-from viper.common.out import cyan
-from viper.common.abstracts import Module
-from viper.common.utils import hexdump, get_md5
-from viper.core.session import __sessions__
-from viper.core.database import Database
+from menagerie.common.out import cyan
+from menagerie.common.abstracts import Module
+from menagerie.common.utils import hexdump, get_md5
+from menagerie.core.session import __sessions__
+from menagerie.core.database import Database
 
 
 class SWF(Module):

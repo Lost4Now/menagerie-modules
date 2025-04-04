@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import os
@@ -29,13 +29,13 @@ try:
 except ImportError:
     HAVE_VERIFYSIGS = False
 
-import viper
-from viper.common.out import bold
-from viper.common.abstracts import Module
-from viper.common.utils import get_type, get_md5
-from viper.core.database import Database
-from viper.core.storage import get_sample_path
-from viper.core.session import __sessions__
+import menagerie
+from menagerie.common.out import bold
+from menagerie.common.abstracts import Module
+from menagerie.common.utils import get_type, get_md5
+from menagerie.core.database import Database
+from menagerie.core.storage import get_sample_path
+from menagerie.core.session import __sessions__
 
 
 class PE(Module):
@@ -561,7 +561,7 @@ class PE(Module):
     def peid(self):
 
         def get_signatures():
-            userdb_path = os.path.join(os.path.dirname(viper.__file__), "data", "peid", "UserDB.TXT")
+            userdb_path = os.path.join(os.path.dirname(menagerie.__file__), "data", "peid", "UserDB.TXT")
 
             if not userdb_path:
                 return
@@ -1189,7 +1189,7 @@ class PE(Module):
 
     def pehash(self):
         if not HAVE_PEHASH:
-            self.log('error', "PEhash is missing. Please copy PEhash to the modules directory of Viper")
+            self.log('error', "PEhash is missing. Please copy PEhash to the modules directory of menagerie")
             return
 
         current_pehash = None

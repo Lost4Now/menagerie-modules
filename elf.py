@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import os
@@ -17,11 +17,11 @@ try:
 except ImportError:
     HAVE_ELFTOOLS = False
 
-from viper.common.out import bold
-from viper.common.abstracts import Module
-from viper.core.session import __sessions__
-from viper.core.database import Database
-from viper.core.storage import get_sample_path
+from menagerie.common.out import bold
+from menagerie.common.abstracts import Module
+from menagerie.core.session import __sessions__
+from menagerie.core.database import Database
+from menagerie.core.storage import get_sample_path
 
 
 # Have a look at scripts/readelf.py - pyelftools

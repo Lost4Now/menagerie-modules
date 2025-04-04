@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import zipfile
@@ -10,12 +10,12 @@ import json
 
 import jbxapi
 
-from viper.common.abstracts import Module
-from viper.common.objects import File
-from viper.core.storage import store_sample
-from viper.core.database import Database
-from viper.core.config import __config__
-from viper.core.session import __sessions__
+from menagerie.common.abstracts import Module
+from menagerie.common.objects import File
+from menagerie.core.storage import store_sample
+from menagerie.core.database import Database
+from menagerie.core.config import __config__
+from menagerie.core.session import __sessions__
 
 cfg = __config__
 cfg.parse_http_client(cfg.joesandbox)
@@ -49,7 +49,7 @@ class JoeSandbox(Module):
                                      apikey=cfg.joesandbox.apikey,
                                      accept_tac=cfg.joesandbox.accept_tac,
                                      verify_ssl=cfg.joesandbox.verify,
-                                     user_agent="viper")
+                                     user_agent="menagerie")
 
         if self.args is None:
             return

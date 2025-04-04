@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of Viper - https://github.com/viper-framework/viper
+# This file is part of menagerie - https://github.com/menagerie-framework/menagerie
 # See the file 'LICENSE' for copying permission.
 
 import argparse
@@ -21,15 +21,15 @@ except ImportError:
     HAVE_REQUESTS = False
 
 
-from viper.common.abstracts import Module
-from viper.core.database import Database
-from viper.core.session import __sessions__
-from viper.core.project import __project__
-from viper.core.storage import get_sample_path
-from viper.common.objects import MispEvent
-from viper.core.config import __config__
+from menagerie.common.abstracts import Module
+from menagerie.core.database import Database
+from menagerie.core.session import __sessions__
+from menagerie.core.project import __project__
+from menagerie.core.storage import get_sample_path
+from menagerie.common.objects import MispEvent
+from menagerie.core.config import __config__
 
-log = logging.getLogger('viper')
+log = logging.getLogger('menagerie')
 
 cfg = __config__
 cfg.parse_http_client(cfg.misp)
@@ -369,13 +369,13 @@ class MISP(Module):
         if len(shas) == 1:
             __sessions__.new(get_sample_path(shas.pop()), MispEvent(misp_event, self.offline_mode))
         elif len(shas) > 1:
-            self.log('success', 'The following samples are in this viper instance:')
+            self.log('success', 'The following samples are in this menagerie instance:')
             __sessions__.new(misp_event=MispEvent(misp_event, self.offline_mode))
             for s in shas:
                 self.log('item', s)
         else:
             __sessions__.new(misp_event=MispEvent(misp_event, self.offline_mode))
-            self.log('info', 'No known (in Viper) samples in that event.')
+            self.log('info', 'No known (in menagerie) samples in that event.')
 
     def _find_related_id(self, event):
         if 'RelatedEvent' not in event:
@@ -430,7 +430,7 @@ class MISP(Module):
         if not ok:
             self.log('error', data)
             return
-        rule_path = os.path.join(expanduser("~"), ".viper", 'data/yara', self.args.event + '.yara')
+        rule_path = os.path.join(expanduser("~"), ".menagerie", 'data/yara', self.args.event + '.yara')
         if os.path.exists(rule_path):
             self.log('error', 'File {} already exists.'.format(rule_path))
             return
@@ -608,13 +608,13 @@ class MISP(Module):
         self.distribution = None if self.distribution == "" else self.distribution
         if type(self.distribution) not in (type(None), int):
             self.distribution = None
-            self.log('info', "The distribution stored in viper config is not an integer, setting to None")
+            self.log('info', "The distribution stored in menagerie config is not an integer, setting to None")
 
         self.sharinggroup = cfg.misp.get("misp_sharinggroup", None)
         self.sharinggroup = None if self.sharinggroup == "" else self.sharinggroup
         if type(self.sharinggroup) not in (type(None), int):
             self.sharinggroup = None
-            self.log('info', "The sharing group stored in viper config is not an integer, setting to None")
+            self.log('info', "The sharing group stored in menagerie config is not an integer, setting to None")
 
         if not self.offline_mode:
             try:

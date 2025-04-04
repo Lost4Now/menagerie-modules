@@ -33,7 +33,7 @@ jsonschema>=4.20.0 # Updated to a newer version
 
 # Office module
 olefile>=0.46 # No update needed, but test it.
-# xxxswf @ git+https://github.com/viper-framework/xxxswf.git@9188316eb7a179326d99bfde9fe0184bb3cee6a3#egg=xxxswf # Removed: Very old, likely incompatible. Consider removing or finding a replacement.
+# xxxswf @ git+https://github.com/menagerie-framework/xxxswf.git@9188316eb7a179326d99bfde9fe0184bb3cee6a3#egg=xxxswf # Removed: Very old, likely incompatible. Consider removing or finding a replacement.
 pyparsing>=3.1.1 # Updated to a newer version
 packaging>=23.2 # Updated to a newer version
 
@@ -79,7 +79,7 @@ pycryptodome>=3.20.0 # Added: Replacement for pycrypto
 # Source Code Dependencies
 
 # Scraper
-# ScrapySplashWrapper @ git+https://github.com/viper-framework/ScrapySplashWrapper.git#egg=ScrapySplashWrapper # Removed: Git package, likely incompatible. Consider removing or finding a replacement.
+# ScrapySplashWrapper @ git+https://github.com/menagerie-framework/ScrapySplashWrapper.git#egg=ScrapySplashWrapper # Removed: Git package, likely incompatible. Consider removing or finding a replacement.
 
 # PE module (verify sigs)
 # verify-sigs @ git+https://github.com/sebdraven/verify-sigs.git#egg=verify-sigs # Removed: Git package, likely incompatible. Consider removing or finding a replacement.

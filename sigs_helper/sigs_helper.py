@@ -15,7 +15,7 @@
 #
 # Author: caronni@google.com (Germano Caronni)
 #
-# Viper adaptation: jahrome11@gmail.com (Jerome Marty)
+# menagerie adaptation: jahrome11@gmail.com (Jerome Marty)
 
 
 """
